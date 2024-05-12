@@ -14,7 +14,12 @@ namespace Kursova.View.UserInterface.Pages
       InitializeComponent();
     }
 
+    private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
+    {
 
+      double newSize = Math.Min(this.ActualWidth, this.ActualHeight) * 0.10;
+      MyTitle.FontSize = newSize;
+    }
     private void Button_Authorization_Click(object sender, RoutedEventArgs e)
     {
       try

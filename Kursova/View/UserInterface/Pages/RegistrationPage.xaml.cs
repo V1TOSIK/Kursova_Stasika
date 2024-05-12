@@ -4,6 +4,7 @@ using Kursova.Modul;
 using Kursova.Modul.Data;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System;
 
 namespace Kursova.View.UserInterface.Pages
 {
@@ -16,6 +17,13 @@ namespace Kursova.View.UserInterface.Pages
       this.context = context;
     }
 
+    private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
+    {
+
+      double newSize = Math.Min(this.ActualWidth, this.ActualHeight) * 0.09;
+
+      MyTitle.FontSize = newSize;
+    }
     private void Button_Registr_Click(object sender, RoutedEventArgs e)
     {
       try

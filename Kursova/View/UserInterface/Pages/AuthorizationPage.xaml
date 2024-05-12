@@ -10,39 +10,59 @@
       Background="Transparent">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="40*"/>
         </Grid.ColumnDefinitions>
-        <Grid>
+        <Grid Grid.Column="0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="50*" MaxHeight="200" MinHeight="100" />
-                <RowDefinition Height="15*" MaxHeight="100" MinHeight="50" />
-                <RowDefinition Height="35*" MaxHeight="200" MinHeight="100" />
+                <RowDefinition Height="45*" MinHeight="50" MaxHeight="100" />
+                <RowDefinition Height="20*" MinHeight="50" />
+                <RowDefinition Height="35*" MinHeight="50" />
             </Grid.RowDefinitions>
-            <!--<Image Grid.Row="0" HorizontalAlignment="Center" Margin="0,10,0,10" VerticalAlignment="Bottom"
-               Height="auto" Width="auto" Source="/img/user.png"/>-->
-
+            <Grid Grid.Row="0">
+                <TextBlock x:Name="MyTitle" Text="ВХІД" Foreground="LightGray"
+                           MinHeight="20" MinWidth="100"
+                           MaxHeight="100" MaxWidth="450"
+                           Background="Transparent" TextAlignment="Center"
+                           FontWeight="ExtraBlack"
+                           Margin="0,10,0,0" SizeChanged="Window_SizeChanged"/>
+            </Grid>
+            
             <Grid Grid.Row="1">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="50*"/>
-                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="50*" MinHeight="20"/>
+                    <RowDefinition Height="50*" MinHeight="20"/>
                 </Grid.RowDefinitions>
 
-                <userControls:NewTextBlock x:Name="logTextBox" Placeholder="Логін" Grid.Row="0" Width="150" Height="20"/>
-                <userControls:NewPasswordBlock x:Name="logPassBox" PlaceholderPass="Пароль" Grid.Row="1" Width="150" Height="20"/>
+                <userControls:NewTextBlock x:Name="logTextBox" Placeholder="Логін" Grid.Row="0"
+                                           MinWidth="100" MaxWidth="700"
+                                           MinHeight="25" MaxHeight="40"
+                                           Margin="5"
+                                           />
+                <userControls:NewPasswordBlock x:Name="logPassBox" PlaceholderPass="Пароль" Grid.Row="1" 
+                                               MinWidth="100" MaxWidth="700"
+                                               MinHeight="25" MaxHeight="40"
+                                               Margin="5"/>
 
             </Grid>
             <Grid Grid.Row="2" Margin="0,25,0,0">
-                <Button Width="100" Height="auto" HorizontalAlignment="Center" 
-                    VerticalAlignment="Top" Padding="20,0" Content="Ввійти"
-                    Click="Button_Authorization_Click" Background="Transparent" Foreground="Black"
-                    BorderThickness="0" BorderBrush="Gray" FontWeight="Bold">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50*"/>
+                    <ColumnDefinition Width="50*"/>
+                </Grid.ColumnDefinitions>
+                <Button MinHeight="20" MaxHeight="50" MinWidth="80" MaxWidth="400" Margin="20,0" Content="Ввійти"
+                    Click="Button_Authorization_Click" Background="Transparent" Foreground="LightGray"
+                    BorderThickness="1" BorderBrush="Gray" FontWeight="ExtraBlack" Grid.Column="0">
                 </Button>
-                <Button Width="90" Height="auto" HorizontalAlignment="Center"
-                    VerticalAlignment="Top" Padding="10,0" Margin="0,30,0,0" Content="Реєстрація"
-                    Background="Transparent" BorderThickness="0" BorderBrush="Gray"
-                    Click="Button_Registration_Click"  Foreground="Black" FontWeight="Bold"/>
+                <Button  MinHeight="20" MaxHeight="50" MinWidth="80" MaxWidth="400" Margin="20,0" Content="Реєстрація"
+                    Background="Transparent" BorderThickness="1" BorderBrush="Gray" Grid.Column="1"
+                    Click="Button_Registration_Click"  Foreground="LightGray" FontWeight="ExtraBlack"/>
 
             </Grid>
+            
         </Grid>
+        <Image Grid.Column="1" Source="/img/user.png" Margin="10"
+               MinHeight="200" MinWidth="200"
+               MaxHeight="400" MaxWidth="400"/>
     </Grid>
 </Page>

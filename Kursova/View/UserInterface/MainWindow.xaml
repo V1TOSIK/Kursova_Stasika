@@ -10,8 +10,8 @@
         WindowStartupLocation="CenterScreen">
     <Window.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-            <GradientStop Color="LightGray" Offset="1"/>
-            <GradientStop Color="#fff" Offset="0"/>
+            <GradientStop Color="#212121" Offset="1"/>
+            <GradientStop Color="#2e2e2e" Offset="0"/>
         </LinearGradientBrush>
     </Window.Background>
     <Grid>
@@ -26,28 +26,28 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             
-            <Border x:Name="product_border" BorderBrush="Black" BorderThickness="1" Grid.Column="0"/>
+            <Border x:Name="product_border" BorderBrush="White" BorderThickness="1" Grid.Column="0"/>
             <TextBlock x:Name="product_button" Grid.Column="0" TextAlignment="Center" Text="Продукти"
                         VerticalAlignment="Center" FontSize="13" MouseLeftButtonDown="product_button_MouseLeftButtonDown"
-                        FontWeight="Medium"  TextWrapping="Wrap" TextTrimming="CharacterEllipsis" Height="45" Foreground="Black"/>
+                        FontWeight="Medium"  TextWrapping="Wrap" TextTrimming="CharacterEllipsis" Height="45" Foreground="LightGray"/>
 
-            <Border x:Name="catalog_border" BorderBrush="Black" BorderThickness="1" Grid.Column="1"/>
+            <Border x:Name="catalog_border" BorderBrush="White" BorderThickness="1" Grid.Column="1"/>
             <TextBlock x:Name="Catalog_page_button" Grid.Column="1" TextAlignment="Center" Text="Каталог" 
                         VerticalAlignment="Center" TextWrapping="Wrap" TextTrimming="CharacterEllipsis" FontSize="13"
-                        FontWeight="Medium" MouseLeftButtonDown="Catalog_MouseLeftButtonDown" Height="45" Foreground="Black"/>
+                        FontWeight="Medium" MouseLeftButtonDown="Catalog_MouseLeftButtonDown" Height="45" Foreground="LightGray"/>
 
-            <Border x:Name="Globalcatalog_border" BorderBrush="Black" BorderThickness="1" Grid.Column="2"/>
+            <Border x:Name="Globalcatalog_border" BorderBrush="White" BorderThickness="1" Grid.Column="2"/>
             <TextBlock x:Name="GlobalCatalog_page_button" Grid.Column="2" TextAlignment="Center" Text="Загальний каталог" 
                         VerticalAlignment="Center" TextWrapping="Wrap" TextTrimming="CharacterEllipsis" FontSize="13"
-                        FontWeight="Medium" MouseLeftButtonDown="GlobalCatalog_MouseLeftButtonDown" Height="45" Foreground="Black"/>
+                        FontWeight="Medium" MouseLeftButtonDown="GlobalCatalog_MouseLeftButtonDown" Height="45" Foreground="LightGray"/>
 
         </Grid>
 
         <Frame x:Name="mainFrame" Grid.Row="1" BorderBrush="black" BorderThickness="0" NavigationUIVisibility="Hidden">
             <Frame.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                    <GradientStop Color="LightGray" Offset="1"/>
-                    <GradientStop Color="#fff" Offset="0"/>
+                    <GradientStop Color="#212121" Offset="1"/>
+                    <GradientStop Color="#2e2e2e" Offset="0"/>
                 </LinearGradientBrush>
             </Frame.Background>
         </Frame>

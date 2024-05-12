@@ -6,12 +6,12 @@
         xmlns:local="clr-namespace:Kursova.View.UserInterface"
         mc:Ignorable="d"
         Height="450" Width="800"
-        
+        MinHeight="350" MinWidth="600"
         WindowStartupLocation="CenterScreen">
     <Window.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-            <GradientStop Color="#fff" Offset="1"/>
-            <GradientStop Color="#f9f9f9" Offset="0"/>
+            <GradientStop Color="#212121" Offset="1"/>
+            <GradientStop Color="#2e2e2e" Offset="0"/>
         </LinearGradientBrush>
     </Window.Background>
     <Frame x:Name="Authorization_RegistrationFrame" Loaded="Frame_Loaded"/>
